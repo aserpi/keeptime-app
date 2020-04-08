@@ -10,6 +10,11 @@ class LoginForm extends StatefulWidget {
 
 class _LoginFormState extends State<LoginForm> {
   final _formKey = GlobalKey<FormState>();
+
+  FocusNode _passwordFocus;
+  FocusNode _usernameFocus;
+  FocusNode _serverFocus;
+
   bool rememberMe = false;
 
   @override
@@ -23,11 +28,24 @@ class _LoginFormState extends State<LoginForm> {
         isDense: true,
         labelText: S.of(context).username,
       ),
+      focusNode: _usernameFocus,
+      onFieldSubmitted: (_) {
+        _usernameFocus.unfocus();
+        FocusScope.of(context).requestFocus(_passwordFocus);
+      },
       keyboardType: TextInputType.emailAddress,
+      textInputAction: TextInputAction.next,
     );
 
     final passwordField = FormFieldPadding(
-      child: PasswordFormField(),
+      child: PasswordFormField(
+        focusNode: _passwordFocus,
+        onFieldSubmitted: (_) {
+          _passwordFocus.unfocus();
+          FocusScope.of(context).requestFocus(_serverFocus);
+        },
+        textInputAction: TextInputAction.next,
+      ),
     );
 
     final serverField = FormFieldPadding(
@@ -39,12 +57,16 @@ class _LoginFormState extends State<LoginForm> {
         isDense: true,
         labelText: S.of(context).server,
       ),
+      focusNode: _serverFocus,
       keyboardType: TextInputType.url,
+      onFieldSubmitted: (_) {
+        _serverFocus.unfocus();
+      },
+      textInputAction: TextInputAction.done,
       validator: (String value) {
-        if (value.isNotEmpty && !isURL(value)) {
-          return S.of(context).server_invalid;
-        }
-        return null;
+        return value.isNotEmpty && !isURL(value)
+            ? S.of(context).server_invalid
+            : null;
       },
     ));
 
@@ -82,6 +104,22 @@ class _LoginFormState extends State<LoginForm> {
         ],
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _passwordFocus.dispose();
+    _serverFocus.dispose();
+    _usernameFocus.dispose();
+    super.dispose();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _passwordFocus = FocusNode();
+    _serverFocus = FocusNode();
+    _usernameFocus = FocusNode();
   }
 }
 

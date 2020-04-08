@@ -2,8 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:keeptime/generated/l10n.dart';
 
 class PasswordFormField extends StatefulWidget {
+  final FocusNode focusNode;
+  final Function(String) onFieldSubmitted;
+  final TextInputAction textInputAction;
+
   @override
   _PasswordFormFieldState createState() => _PasswordFormFieldState();
+
+  const PasswordFormField(
+      {Key key, this.focusNode, this.onFieldSubmitted, this.textInputAction})
+      : super(key: key);
 }
 
 class _PasswordFormFieldState extends State<PasswordFormField> {
@@ -32,8 +40,11 @@ class _PasswordFormFieldState extends State<PasswordFormField> {
         ),
       ),
       enableSuggestions: false,
+      focusNode: widget.focusNode,
       keyboardType: TextInputType.text,
       obscureText: !isPasswordVisible,
+      onFieldSubmitted: widget.onFieldSubmitted,
+      textInputAction: widget.textInputAction,
     );
   }
 }
