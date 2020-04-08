@@ -36,6 +36,7 @@ class KeepTime extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      darkTheme: ThemeData.dark(),
       home: KeepTimeApp(),
     );
   }
