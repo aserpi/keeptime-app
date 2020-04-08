@@ -1,3 +1,9 @@
 {
-  "app_name": "KeepTime"
+  "app_name": "KeepTime",
+  "login": "Login",
+  "password": "Password",
+  "remember_me": "Remember me",
+  "server": "Server",
+  "server_invalid": "Not a valid URL",
+  "username": "Username"
 }

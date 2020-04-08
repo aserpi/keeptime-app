@@ -21,6 +21,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
-    "app_name" : MessageLookupByLibrary.simpleMessage("KeepTime")
+    "app_name" : MessageLookupByLibrary.simpleMessage("KeepTime"),
+    "login" : MessageLookupByLibrary.simpleMessage("Login"),
+    "password" : MessageLookupByLibrary.simpleMessage("Password"),
+    "remember_me" : MessageLookupByLibrary.simpleMessage("Remember me"),
+    "server" : MessageLookupByLibrary.simpleMessage("Server"),
+    "server_invalid" : MessageLookupByLibrary.simpleMessage("Not a valid URL"),
+    "username" : MessageLookupByLibrary.simpleMessage("Username")
   };
 }

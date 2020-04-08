@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:keeptime/login_form.dart';
 import 'package:keeptime/generated/l10n.dart';
+import 'package:keeptime/ui/login_form.dart';
 
 void main() {
   runApp(KeepTime());
@@ -49,7 +49,10 @@ class KeepTimeApp extends StatelessWidget {
       appBar: AppBar(
         title: Text(S.of(context).app_name),
       ),
-      body: LoginForm()
+      body: Container(
+        child: LoginForm(),
+        margin: EdgeInsets.symmetric(horizontal: 24.0, vertical: 8.0),
+      )
     );
   }
 }

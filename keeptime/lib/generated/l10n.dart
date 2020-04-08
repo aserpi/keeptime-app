@@ -35,6 +35,60 @@ class S {
       args: [],
     );
   }
+
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get remember_me {
+    return Intl.message(
+      'Remember me',
+      name: 'remember_me',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get server {
+    return Intl.message(
+      'Server',
+      name: 'server',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get server_invalid {
+    return Intl.message(
+      'Not a valid URL',
+      name: 'server_invalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get username {
+    return Intl.message(
+      'Username',
+      name: 'username',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
