@@ -1,11 +1,11 @@
-import 'package:keeptime/users/iuser.dart';
+import 'package:keeptime/users/user.dart';
 
-class UserPlaceholder extends IUser {
+class PlaceholderUser extends User {
 
-  const UserPlaceholder(String name, String username, url)
+  const PlaceholderUser(String name, String username, url)
       : super(name, username, url);
 
-  UserPlaceholder.fromJson(Map<String, dynamic> json)
+  PlaceholderUser.fromJson(Map<String, dynamic> json)
       : super(json["name"], json["username"], json["url"]);
 
   Map<String, dynamic> toJson() => {

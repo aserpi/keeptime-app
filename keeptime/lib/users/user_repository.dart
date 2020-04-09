@@ -2,14 +2,14 @@ import 'dart:convert';
 
 import 'package:http/http.dart';
 import 'package:keeptime/network.dart';
-import 'package:keeptime/users/user.dart';
+import 'package:keeptime/users/registered_user.dart';
 
-import 'iuser.dart';
+import 'user.dart';
 
 // Basic in-memory caching
 final Map<String, CachedUser> _users = Map<String, CachedUser>();
 
-Future<IUser> getUser(String url, {bool forceRefresh = false}) async {
+Future<RegisteredUser> getRegisteredUser(String url, {bool forceRefresh = false}) async {
   if(! forceRefresh && _users.containsKey(url)) {
     final cachedUser = _users[url];
     if(DateTime.now().difference(cachedUser.cachedAt) < _expireCacheIn) {
@@ -18,13 +18,13 @@ Future<IUser> getUser(String url, {bool forceRefresh = false}) async {
   }
 
   final response = await get(url, headers: authenticatedJsonHeaders());
-  final user = User.fromJson(json.decode(response.body));
+  final user = RegisteredUser.fromJson(json.decode(response.body));
   _users[user.url] = CachedUser(user);
   return user;
 }
 
 class CachedUser {
-  final IUser user;
+  final User user;
   final DateTime cachedAt;
 
   CachedUser(this.user) : cachedAt = DateTime.now();

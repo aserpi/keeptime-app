@@ -1,21 +1,9 @@
-import 'package:keeptime/users/iuser.dart';
+import 'package:equatable/equatable.dart';
 
-class User extends IUser {
-  final String email;
+abstract class User extends Equatable {
+  final String name;
+  final String url;
+  final String username;
 
-  const User(String name, String username, this.email, url)
-      : super(name, username, url);
-
-  User.fromJson(Map<String, dynamic> json)
-      : email = json["email"],
-        super(json["name"], json["username"], json["url"]);
-
-  Map<String, dynamic> toJson() => {
-    "email": email,
-    "name": name,
-    "username": username
-  };
-
-  @override
-  List<Object> get props => [url];
+  const User(this.name, this.username, this.url);
 }
