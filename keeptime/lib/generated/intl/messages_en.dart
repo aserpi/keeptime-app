@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "remember_me" : MessageLookupByLibrary.simpleMessage("Remember me"),
     "server" : MessageLookupByLibrary.simpleMessage("Server"),
     "server_invalid" : MessageLookupByLibrary.simpleMessage("Not a valid URL"),
+    "splash_name" : MessageLookupByLibrary.simpleMessage("Keep\nTime"),
     "username" : MessageLookupByLibrary.simpleMessage("Username")
   };
 }

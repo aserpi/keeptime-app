@@ -81,6 +81,15 @@ class S {
     );
   }
 
+  String get splash_name {
+    return Intl.message(
+      'Keep\nTime',
+      name: 'splash_name',
+      desc: '',
+      args: [],
+    );
+  }
+
   String get username {
     return Intl.message(
       'Username',
