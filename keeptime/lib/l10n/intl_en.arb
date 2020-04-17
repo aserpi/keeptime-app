@@ -1,10 +1,14 @@
 {
   "app_name": "KeepTime",
+  "invalid_credentials": "Invalid credentials",
   "login": "Login",
+  "no_internet": "No internet connection",
+  "no_server": "Cannot connect to server",
   "password": "Password",
   "remember_me": "Remember me",
   "server": "Server",
   "server_invalid": "Not a valid URL",
   "splash_name": "Keep\nTime",
+  "unknown_error": "Unknown error",
   "username": "Username"
 }

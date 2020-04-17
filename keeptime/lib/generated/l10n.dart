@@ -36,10 +36,37 @@ class S {
     );
   }
 
+  String get invalid_credentials {
+    return Intl.message(
+      'Invalid credentials',
+      name: 'invalid_credentials',
+      desc: '',
+      args: [],
+    );
+  }
+
   String get login {
     return Intl.message(
       'Login',
       name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get no_internet {
+    return Intl.message(
+      'No internet connection',
+      name: 'no_internet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get no_server {
+    return Intl.message(
+      'Cannot connect to server',
+      name: 'no_server',
       desc: '',
       args: [],
     );
@@ -85,6 +112,15 @@ class S {
     return Intl.message(
       'Keep\nTime',
       name: 'splash_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get unknown_error {
+    return Intl.message(
+      'Unknown error',
+      name: 'unknown_error',
       desc: '',
       args: [],
     );
