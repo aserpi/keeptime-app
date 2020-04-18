@@ -1,5 +1,6 @@
 {
   "app_name": "KeepTime",
+  "email": "Email",
   "invalid_credentials": "Invalid credentials",
   "login": "Login",
   "no_internet": "No internet connection",

@@ -36,6 +36,15 @@ class S {
     );
   }
 
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
   String get invalid_credentials {
     return Intl.message(
       'Invalid credentials',
