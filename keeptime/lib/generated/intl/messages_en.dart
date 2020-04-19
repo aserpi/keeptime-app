@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "email" : MessageLookupByLibrary.simpleMessage("Email"),
     "invalid_credentials" : MessageLookupByLibrary.simpleMessage("Invalid credentials"),
     "login" : MessageLookupByLibrary.simpleMessage("Login"),
+    "login_again" : MessageLookupByLibrary.simpleMessage("Please log in again"),
     "no_internet" : MessageLookupByLibrary.simpleMessage("No internet connection"),
     "no_server" : MessageLookupByLibrary.simpleMessage("Cannot connect to server"),
     "password" : MessageLookupByLibrary.simpleMessage("Password"),

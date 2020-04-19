@@ -3,6 +3,7 @@
   "email": "Email",
   "invalid_credentials": "Invalid credentials",
   "login": "Login",
+  "login_again": "Please log in again",
   "no_internet": "No internet connection",
   "no_server": "Cannot connect to server",
   "password": "Password",

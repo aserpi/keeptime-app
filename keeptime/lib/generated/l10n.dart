@@ -63,6 +63,15 @@ class S {
     );
   }
 
+  String get login_again {
+    return Intl.message(
+      'Please log in again',
+      name: 'login_again',
+      desc: '',
+      args: [],
+    );
+  }
+
   String get no_internet {
     return Intl.message(
       'No internet connection',

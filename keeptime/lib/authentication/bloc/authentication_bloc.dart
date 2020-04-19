@@ -17,17 +17,19 @@ class AuthenticationBloc
       try {
         final currentUserId = await loginWithStoredCredentials();
         if (currentUserId == null) {
-          yield AuthenticationUnauthenticated();
+          yield AuthenticationUnauthenticated(error: null);
         } else {
           yield AuthenticationAuthenticated(currentUserId: currentUserId);
         }
-      } catch (_) {
-        yield AuthenticationUnauthenticated();
+      } catch (error) {
+        yield AuthenticationUnauthenticated(error: error);
       }
-    } else if (event is LoggedIn) {
+    }
+    else if (event is LoggedIn) {
       yield AuthenticationAuthenticated(currentUserId: event.currentUserId);
-    } else if (event is LoggedOut) {
-      yield AuthenticationUnauthenticated();
+    }
+    else if (event is LoggedOut) {
+      yield AuthenticationUnauthenticated(error: event.error);
     }
   }
 }
