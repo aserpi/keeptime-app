@@ -1,21 +1,21 @@
-import 'package:keeptime/users/user.dart';
+import 'package:json_api/document.dart';
+
+import 'user.dart';
 
 class RegisteredUser extends User {
   final String email;
 
-  const RegisteredUser(String name, String username, this.email, url)
-      : super(name, username, url);
+  RegisteredUser(String id, String name, String username, this.email)
+      : super(id, name, username);
 
-  RegisteredUser.fromJson(Map<String, dynamic> json)
-      : email = json["email"],
-        super(json["name"], json["username"], json["url"]);
+  factory RegisteredUser.fromDocument(Document document) {
+    final res = (document.data as ResourceData).unwrap();
+    final attributes = res.attributes;
 
-  Map<String, dynamic> toJson() => {
-    "email": email,
-    "name": name,
-    "username": username
-  };
+    return RegisteredUser(res.id, attributes["name"], attributes["username"],
+        attributes["email"]);
+  }
 
   @override
-  List<Object> get props => [url];
+  List<Object> get props => [id];
 }
