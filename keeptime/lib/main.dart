@@ -8,7 +8,7 @@ import 'login/login.dart';
 import 'splash/spash.dart';
 
 void main() {
-  BlocSupervisor.delegate = BlocDelegate();
+  Bloc.observer = BlocObserver();
   runApp(
     BlocProvider<AuthenticationBloc>(
       create: (context) {
