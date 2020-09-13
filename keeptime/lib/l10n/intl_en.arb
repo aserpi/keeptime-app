@@ -2,15 +2,20 @@
   "app_name": "KeepTime",
   "email": "Email",
   "invalid_credentials": "Invalid credentials",
+  "log": "Log",
   "login": "Login",
   "login_again": "Please log in again",
+  "logout": "Logout",
   "no_internet": "No internet connection",
   "no_server": "Cannot connect to server",
   "password": "Password",
+  "preferences": "Settings",
   "remember_me": "Remember me",
   "server": "Server",
   "server_invalid": "Not a valid URL",
   "splash_name": "Keep\nTime",
   "unknown_error": "Unknown error",
-  "username": "Username"
+  "user_preferences": "User settings",
+  "username": "Username",
+  "workspaces": "Workspaces"
 }

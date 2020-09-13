@@ -8,18 +8,24 @@ import 'intl/messages_all.dart';
 // Made by Localizely
 // **************************************************************************
 
+// ignore_for_file: non_constant_identifier_names, lines_longer_than_80_chars
+
 class S {
   S();
+  
+  static S current;
   
   static const AppLocalizationDelegate delegate =
     AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final String name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
-    final String localeName = Intl.canonicalizedLocale(name);
+    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
+    final localeName = Intl.canonicalizedLocale(name); 
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
-      return S();
+      S.current = S();
+      
+      return S.current;
     });
   } 
 
@@ -27,6 +33,7 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `KeepTime`
   String get app_name {
     return Intl.message(
       'KeepTime',
@@ -36,6 +43,7 @@ class S {
     );
   }
 
+  /// `Email`
   String get email {
     return Intl.message(
       'Email',
@@ -45,6 +53,7 @@ class S {
     );
   }
 
+  /// `Invalid credentials`
   String get invalid_credentials {
     return Intl.message(
       'Invalid credentials',
@@ -54,6 +63,17 @@ class S {
     );
   }
 
+  /// `Log`
+  String get log {
+    return Intl.message(
+      'Log',
+      name: 'log',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
   String get login {
     return Intl.message(
       'Login',
@@ -63,6 +83,7 @@ class S {
     );
   }
 
+  /// `Please log in again`
   String get login_again {
     return Intl.message(
       'Please log in again',
@@ -72,6 +93,17 @@ class S {
     );
   }
 
+  /// `Logout`
+  String get logout {
+    return Intl.message(
+      'Logout',
+      name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No internet connection`
   String get no_internet {
     return Intl.message(
       'No internet connection',
@@ -81,6 +113,7 @@ class S {
     );
   }
 
+  /// `Cannot connect to server`
   String get no_server {
     return Intl.message(
       'Cannot connect to server',
@@ -90,6 +123,7 @@ class S {
     );
   }
 
+  /// `Password`
   String get password {
     return Intl.message(
       'Password',
@@ -99,6 +133,17 @@ class S {
     );
   }
 
+  /// `Settings`
+  String get preferences {
+    return Intl.message(
+      'Settings',
+      name: 'preferences',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remember me`
   String get remember_me {
     return Intl.message(
       'Remember me',
@@ -108,6 +153,7 @@ class S {
     );
   }
 
+  /// `Server`
   String get server {
     return Intl.message(
       'Server',
@@ -117,6 +163,7 @@ class S {
     );
   }
 
+  /// `Not a valid URL`
   String get server_invalid {
     return Intl.message(
       'Not a valid URL',
@@ -126,6 +173,7 @@ class S {
     );
   }
 
+  /// `Keep\nTime`
   String get splash_name {
     return Intl.message(
       'Keep\nTime',
@@ -135,6 +183,7 @@ class S {
     );
   }
 
+  /// `Unknown error`
   String get unknown_error {
     return Intl.message(
       'Unknown error',
@@ -144,10 +193,31 @@ class S {
     );
   }
 
+  /// `User settings`
+  String get user_preferences {
+    return Intl.message(
+      'User settings',
+      name: 'user_preferences',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Username`
   String get username {
     return Intl.message(
       'Username',
       name: 'username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Workspaces`
+  String get workspaces {
+    return Intl.message(
+      'Workspaces',
+      name: 'workspaces',
       desc: '',
       args: [],
     );
@@ -172,7 +242,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
 
   bool _isSupported(Locale locale) {
     if (locale != null) {
-      for (Locale supportedLocale in supportedLocales) {
+      for (var supportedLocale in supportedLocales) {
         if (supportedLocale.languageCode == locale.languageCode) {
           return true;
         }

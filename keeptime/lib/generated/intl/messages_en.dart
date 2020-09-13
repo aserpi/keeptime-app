@@ -24,16 +24,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "app_name" : MessageLookupByLibrary.simpleMessage("KeepTime"),
     "email" : MessageLookupByLibrary.simpleMessage("Email"),
     "invalid_credentials" : MessageLookupByLibrary.simpleMessage("Invalid credentials"),
+    "log" : MessageLookupByLibrary.simpleMessage("Log"),
     "login" : MessageLookupByLibrary.simpleMessage("Login"),
     "login_again" : MessageLookupByLibrary.simpleMessage("Please log in again"),
+    "logout" : MessageLookupByLibrary.simpleMessage("Logout"),
     "no_internet" : MessageLookupByLibrary.simpleMessage("No internet connection"),
     "no_server" : MessageLookupByLibrary.simpleMessage("Cannot connect to server"),
     "password" : MessageLookupByLibrary.simpleMessage("Password"),
+    "preferences" : MessageLookupByLibrary.simpleMessage("Settings"),
     "remember_me" : MessageLookupByLibrary.simpleMessage("Remember me"),
     "server" : MessageLookupByLibrary.simpleMessage("Server"),
     "server_invalid" : MessageLookupByLibrary.simpleMessage("Not a valid URL"),
     "splash_name" : MessageLookupByLibrary.simpleMessage("Keep\nTime"),
     "unknown_error" : MessageLookupByLibrary.simpleMessage("Unknown error"),
-    "username" : MessageLookupByLibrary.simpleMessage("Username")
+    "user_preferences" : MessageLookupByLibrary.simpleMessage("User settings"),
+    "username" : MessageLookupByLibrary.simpleMessage("Username"),
+    "workspaces" : MessageLookupByLibrary.simpleMessage("Workspaces")
   };
 }
