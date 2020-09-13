@@ -103,6 +103,16 @@ class S {
     );
   }
 
+  /// `You will be logged out from the application`
+  String get logout_info {
+    return Intl.message(
+      'You will be logged out from the application',
+      name: 'logout_info',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `No internet connection`
   String get no_internet {
     return Intl.message(

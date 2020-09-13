@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "login" : MessageLookupByLibrary.simpleMessage("Login"),
     "login_again" : MessageLookupByLibrary.simpleMessage("Please log in again"),
     "logout" : MessageLookupByLibrary.simpleMessage("Logout"),
+    "logout_info" : MessageLookupByLibrary.simpleMessage("You will be logged out from the application"),
     "no_internet" : MessageLookupByLibrary.simpleMessage("No internet connection"),
     "no_server" : MessageLookupByLibrary.simpleMessage("Cannot connect to server"),
     "password" : MessageLookupByLibrary.simpleMessage("Password"),

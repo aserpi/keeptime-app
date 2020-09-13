@@ -6,6 +6,7 @@
   "login": "Login",
   "login_again": "Please log in again",
   "logout": "Logout",
+  "logout_info": "You will be logged out from the application",
   "no_internet": "No internet connection",
   "no_server": "Cannot connect to server",
   "password": "Password",
