@@ -1,6 +1,6 @@
 import 'package:meta/meta.dart';
 
-import 'cached_resource.dart';
+import 'package:keeptime/repositories/cached_resource.dart';
 
 /// Basic in-memory caching for a resource type.
 abstract class ResourceRepository<T> {

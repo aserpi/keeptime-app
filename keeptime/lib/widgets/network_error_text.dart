@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../generated/l10n.dart';
-import '../network/network.dart';
+import 'package:keeptime/generated/l10n.dart';
+import 'package:keeptime/network/exceptions.dart';
 
-class ErrorText extends StatelessWidget {
+class NetworkErrorText extends StatelessWidget {
   final NetworkException error;
 
-  const ErrorText(this.error, {Key key}) : super(key: key);
+  const NetworkErrorText(this.error, {Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

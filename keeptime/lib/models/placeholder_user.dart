@@ -1,6 +1,6 @@
 import 'package:json_api/document.dart';
 
-import 'user.dart';
+import 'package:keeptime/models/user.dart';
 
 class PlaceholderUser extends User {
   PlaceholderUser(String name, String username, url)

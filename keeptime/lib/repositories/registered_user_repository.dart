@@ -1,7 +1,7 @@
-import '../repository/cached_resource.dart';
-import '../repository/resource_repository.dart';
-import 'registered_user.dart';
-import 'registered_user_provider.dart';
+import 'package:keeptime/models/registered_user.dart';
+import 'package:keeptime/providers/registered_user_provider.dart';
+import 'package:keeptime/repositories/cached_resource.dart';
+import 'package:keeptime/repositories/resource_repository.dart';
 
 /// Basic in-memory caching for registered users.
 class RegisteredUserRepository extends ResourceRepository<RegisteredUser> {

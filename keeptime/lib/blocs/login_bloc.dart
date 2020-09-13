@@ -1,12 +1,15 @@
 import 'dart:async';
 
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 
-import '../../authentication/authentication.dart';
-import '../../network/network.dart';
-import 'login_events.dart';
-import 'login_states.dart';
+import 'package:keeptime/blocs/authentication_bloc.dart';
+import 'package:keeptime/blocs/authentication_events.dart';
+import 'package:keeptime/blocs/login_events.dart';
+import 'package:keeptime/blocs/login_states.dart';
+import 'package:keeptime/network/client.dart';
+import 'package:keeptime/network/exceptions.dart';
+
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   final AuthenticationBloc authenticationBloc;

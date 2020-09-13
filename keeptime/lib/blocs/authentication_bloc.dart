@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../network/network.dart';
-import 'authentication_events.dart';
-import 'authentication_states.dart';
+import 'package:keeptime/network/client.dart';
+import 'package:keeptime/blocs/authentication_events.dart';
+import 'package:keeptime/blocs/authentication_states.dart';
 
 class AuthenticationBloc
     extends Bloc<AuthenticationEvent, AuthenticationState> {

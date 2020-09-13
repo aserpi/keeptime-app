@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
-import '../../network/exceptions.dart';
+import 'package:keeptime/network/exceptions.dart';
 
 abstract class AuthenticationEvent extends Equatable {
   const AuthenticationEvent();
@@ -22,5 +22,5 @@ class LoggedIn extends AuthenticationEvent {
 
 class LoggedOut extends AuthenticationEvent {
   final NetworkException error;
-  const LoggedOut({@required this.error});
+  const LoggedOut({this.error});
 }

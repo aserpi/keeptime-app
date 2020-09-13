@@ -1,7 +1,9 @@
-import '../network/network.dart';
-import '../repository/resource_provider.dart';
-import 'placeholder_user.dart';
+import 'package:keeptime/models/placeholder_user.dart';
+import 'package:keeptime/network/client.dart';
+import 'package:keeptime/network/exceptions.dart';
+import 'package:keeptime/providers/resource_provider.dart';
 
+/// Provider for placeholder users.
 class PlaceholderUserProvider extends ResourceProvider<PlaceholderUser> {
   PlaceholderUserProvider._privateConstructor();
 

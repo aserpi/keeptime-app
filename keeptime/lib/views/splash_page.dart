@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../generated/l10n.dart';
+import 'package:keeptime/generated/l10n.dart';
 
 class SplashPage extends StatelessWidget {
   @override

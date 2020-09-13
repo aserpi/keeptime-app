@@ -1,7 +1,7 @@
-import '../repository/cached_resource.dart';
-import '../repository/resource_repository.dart';
-import 'placeholder_user.dart';
-import 'placeholder_user_provider.dart';
+import 'package:keeptime/models/placeholder_user.dart';
+import 'package:keeptime/providers/placeholder_user_provider.dart';
+import 'package:keeptime/repositories/cached_resource.dart';
+import 'package:keeptime/repositories/resource_repository.dart';
 
 /// Basic in-memory caching for placeholder users.
 class PlaceholderUserRepository extends ResourceRepository<PlaceholderUser> {

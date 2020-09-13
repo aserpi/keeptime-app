@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
-import '../../network/network.dart';
+import 'package:keeptime/network/exceptions.dart';
 
 abstract class LoginState extends Equatable {
   const LoginState();

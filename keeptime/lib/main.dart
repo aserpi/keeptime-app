@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'authentication/authentication.dart';
-import 'generated/l10n.dart';
-import 'login/login.dart';
-import 'splash/spash.dart';
+import 'package:keeptime/blocs/authentication_bloc.dart';
+import 'package:keeptime/blocs/authentication_events.dart';
+import 'package:keeptime/blocs/authentication_states.dart';
+import 'package:keeptime/generated/l10n.dart';
+import 'package:keeptime/views/login_page.dart';
+import 'package:keeptime/views/splash_page.dart';
 
 void main() {
   Bloc.observer = BlocObserver();

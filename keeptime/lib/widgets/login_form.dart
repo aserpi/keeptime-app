@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:string_validator/string_validator.dart';
 
-import '../generated/l10n.dart';
-import '../ui/form_field_padding.dart';
-import '../ui/password_form_field.dart';
-import 'bloc/login_bloc.dart';
-import 'bloc/login_events.dart';
-import 'bloc/login_states.dart';
+import 'package:keeptime/blocs/login_bloc.dart';
+import 'package:keeptime/blocs/login_events.dart';
+import 'package:keeptime/blocs/login_states.dart';
+import 'package:keeptime/generated/l10n.dart';
+import 'package:keeptime/widgets/form_field_padding.dart';
+import 'package:keeptime/widgets/password_form_field.dart';
 
 class LoginForm extends StatefulWidget {
   @override

@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
-import '../../network/exceptions.dart';
+import 'package:keeptime/network/exceptions.dart';
 
 abstract class AuthenticationState extends Equatable {
   @override

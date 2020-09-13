@@ -9,9 +9,9 @@ import 'package:json_api/document.dart';
 import 'package:json_api/http.dart';
 import 'package:json_api/routing.dart';
 
-import 'exceptions.dart';
-import '../users/registered_user.dart';
-import '../users/registered_user_repository.dart';
+import 'package:keeptime/models/registered_user.dart';
+import 'package:keeptime/network/exceptions.dart';
+import 'package:keeptime/repositories/registered_user_repository.dart';
 
 /// Client for JSON:API requests.
 RoutingClient client;
