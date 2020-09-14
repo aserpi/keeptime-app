@@ -14,8 +14,14 @@ class MainBloc extends Bloc<MainEvent, MainState> {
 
   @override
   Stream<MainState> mapEventToState(MainEvent event) async* {
-    if (event is PreferencesButtonPressed) {
+    if (event is LogButtonPressed) {
+      yield HomeLog();
+    } else if (event is PreferencesButtonPressed) {
       yield HomePreferences();
+    } else if (event is WorkspacesButtonPressed) {
+      yield HomeWorkspaces();
+    } else {
+      throw UnimplementedError("Unknown event " + event.runtimeType.toString());
     }
   }
 }

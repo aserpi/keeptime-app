@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  curved_drawer: ^0.1.2
   equatable: ^1.2.5
   flutter:
     sdk: flutter

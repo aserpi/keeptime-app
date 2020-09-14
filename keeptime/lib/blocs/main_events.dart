@@ -8,4 +8,8 @@ abstract class MainEvent extends Equatable {
   List<Object> get props => [];
 }
 
+class LogButtonPressed extends MainEvent {}
+
 class PreferencesButtonPressed extends MainEvent {}
+
+class WorkspacesButtonPressed extends MainEvent {}
