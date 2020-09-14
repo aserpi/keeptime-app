@@ -213,6 +213,16 @@ class S {
     );
   }
 
+  /// `Email, password and logout`
+  String get user_preferences_info {
+    return Intl.message(
+      'Email, password and logout',
+      name: 'user_preferences_info',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Username`
   String get username {
     return Intl.message(

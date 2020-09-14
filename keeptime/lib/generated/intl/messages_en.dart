@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "splash_name" : MessageLookupByLibrary.simpleMessage("Keep\nTime"),
     "unknown_error" : MessageLookupByLibrary.simpleMessage("Unknown error"),
     "user_preferences" : MessageLookupByLibrary.simpleMessage("User settings"),
+    "user_preferences_info" : MessageLookupByLibrary.simpleMessage("Email, password and logout"),
     "username" : MessageLookupByLibrary.simpleMessage("Username"),
     "workspaces" : MessageLookupByLibrary.simpleMessage("Workspaces")
   };

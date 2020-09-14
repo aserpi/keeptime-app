@@ -13,6 +13,7 @@ class PreferencesPage extends StatelessWidget {
             MaterialPageRoute(builder: (context) => UserPreferencesPage()));
       },
       title: Text(S.of(context).user_preferences),
+      subtitle: Text(S.of(context).user_preferences_info),
     );
   }
 }
